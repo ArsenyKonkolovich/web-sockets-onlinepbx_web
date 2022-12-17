@@ -49,21 +49,21 @@ function App() {
 
     return (
     <div>
-    <header class="bd-header bg-dark py-3 d-flex align-items-stretch border-bottom border-dark">
-        <div class="container-fluid d-flex align-items-center">
-          <h1 class="d-flex align-items-center fs-4 text-white mb-0">
-            <img src="../public/img/onpbx_icon2.jpeg" width="38" height="38" class="me-3" alt="onpbx_icon"/>
+    <header className="bd-header bg-dark py-3 d-flex align-items-stretch border-bottom border-dark">
+        <div className="container-fluid d-flex align-items-center">
+          <h1 className="d-flex align-items-center fs-4 text-white mb-0">
+            <img src="../public/img/onpbx_icon2.jpeg" width="38" height="38" className="me-3" alt="onpbx_icon"/>
             OnlinePBX Websockets 3.0
           </h1>
         </div>
       </header>
       <noscript>You need to enable JavaScript to run this app.</noscript>
-      <div class="container text-center">
-        <div class="row">
-          <div class="col-3 text-start">
+      <div className="container text-center">
+        <div className="row">
+          <div className="col-3 text-start">
             <Form state={state} dispatch={dispatch}/>
           </div>
-          <div class="col">
+          <div className="col">
             <Events state={state}/>
           </div>
         </div>
