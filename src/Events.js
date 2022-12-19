@@ -8,7 +8,7 @@ function Events({ state }) {
     const [events, setEvents] = useState('');
 
     useEffect(() => {
-        if(state.isConnect === true)
+        if(state.isConnect)
         wsConnect(state, setEvents);  
     }, [state.isConnect])
 
