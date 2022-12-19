@@ -8,7 +8,7 @@ function Events({ state }) {
     const [events, setEvents] = useState('');
 
     useEffect(() => {
-        wsConnect(state, setEvents, events);  
+        wsConnect(state, setEvents);  
     }, [state.isConnect])
 
     data += events;
