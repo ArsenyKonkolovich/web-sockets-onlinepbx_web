@@ -30,7 +30,6 @@ export function Form({state, dispatch}) {
         <form >
             <div className="input-group mb-3">
                 <input type="text" onChange={handleInputChange} name="setAccountName" className="form-control" placeholder="Аккаунт" aria-label="Аккаунт" aria-describedby="basic-addon2"></input>
-                <span className="input-group-text" id="basic-addon2">.onpbx.ru</span>
             </div>
             <div className="input-group mb-3">
                 <input type="text" onChange={handleInputChange} name="setApiKey" className="form-control" placeholder="Api ключ" aria-label="Api ключ" aria-describedby="basic-addon2"></input>

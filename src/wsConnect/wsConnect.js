@@ -13,7 +13,7 @@ const wsConnect = (props, setEvents) => {
 
     const groupNames = [calls, gateway, userBlf, userRegistration]
 
-    const ws = new WebSocket(`wss://${account}.onpbx.ru:3342/?key=${apiKey}`);
+    const ws = new WebSocket(`wss://${account}:3342/?key=${apiKey}`);
 
     ws.onopen = function () {
         ws.send(JSON.stringify({
