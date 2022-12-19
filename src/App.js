@@ -2,6 +2,8 @@ import { useReducer } from 'react'
 import _ from 'lodash'
 import Form from "./Form"
 import Events from "./Events"
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min'
 
 const marginEvents = {
   marginLeft: '30vw'
