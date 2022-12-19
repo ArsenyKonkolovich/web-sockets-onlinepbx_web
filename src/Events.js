@@ -9,6 +9,7 @@ function Events({ state }) {
 
     useEffect(() => {
         if (state.isConnect) wsConnect(state, setEvents);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [state.isConnect]);
 
     data += events;
