@@ -10,15 +10,10 @@ function Events({ state }) {
     const [events, setEvents] = useState('');
 
     useEffect(() => {
-        if(state.isConnect === true) {
-        wsConnect(state, setEvents, events);
-        }
+        wsConnect(state, setEvents, events);  
     }, [state.isConnect])
 
     data += events;
-    console.log('State', state);
-    console.log('Events', events);
-    console.log('Data', data);
     return (
         <pre>{data}</pre>
     )

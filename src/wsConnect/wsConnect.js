@@ -3,7 +3,7 @@
 import { dateCreator, dataFormatter } from './util.js';
 
 
-const wsConnect = (props, setEvents, events) => {
+const wsConnect = (props, setEvents) => {
     const account = props.accountName;
     const apiKey = props.apiKey;
     const calls = props.calls ? 'calls' : '';

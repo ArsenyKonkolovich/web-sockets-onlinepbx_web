@@ -2,8 +2,8 @@ import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min'
 
-
 export function Form({state, dispatch}) {
+
 
     const FORM_ACTIONS = {
         setAccountName: "setAccountName",
@@ -62,7 +62,7 @@ export function Form({state, dispatch}) {
                     invertParams('setUserRegistration', 'userRegistration');
                 }} role="switch" id="flexSwitchCheckDefault"></input>
                 <label className="form-check-label" htmlFor="flexSwitchCheckDefault">User registration</label>
-            </div><button type="button" onClick={() => { 
+            </div><button type="button" onClick={() => {
               invertParams('setIsConnect', 'isConnect');
                 }} className="btn btn-primary mt-3">Подключиться</button>
         </form>
