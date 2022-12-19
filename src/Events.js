@@ -8,7 +8,7 @@ function Events({ state }) {
     const [events, setEvents] = useState("");
 
     useEffect(() => {
-        if (state.isConnect) wsConnect(state, setEvents);
+        if (state.accountName && state.apiKey) wsConnect(state, setEvents);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [state.isConnect]);
 
