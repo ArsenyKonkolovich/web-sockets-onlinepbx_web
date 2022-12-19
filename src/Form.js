@@ -52,15 +52,14 @@ export function Form({ state, dispatch }) {
       <div className="form-check form-switch">
         <input
           className="form-check-input"
-          name="setCalls"
           type="checkbox"
           onClick={() => {
             invertParams("setCalls", "calls");
           }}
           role="switch"
-          id="flexSwitchCheckDefault"
+          id="calls"
         ></input>
-        <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
+        <label className="form-check-label" htmlFor="calls">
           Calls
         </label>
       </div>
@@ -72,9 +71,9 @@ export function Form({ state, dispatch }) {
             invertParams("setGateway", "gateway");
           }}
           role="switch"
-          id="flexSwitchCheckDefault"
+          id="gateway"
         ></input>
-        <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
+        <label className="form-check-label" htmlFor="gateway">
           Gateway
         </label>
       </div>
@@ -86,9 +85,9 @@ export function Form({ state, dispatch }) {
             invertParams("setUserBlf", "userBlf");
           }}
           role="switch"
-          id="flexSwitchCheckDefault"
+          id="userBlf"
         ></input>
-        <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
+        <label className="form-check-label" htmlFor="userBlf">
           User blf
         </label>
       </div>
@@ -100,9 +99,9 @@ export function Form({ state, dispatch }) {
             invertParams("setUserRegistration", "userRegistration");
           }}
           role="switch"
-          id="flexSwitchCheckDefault"
+          id="userRegistration"
         ></input>
-        <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
+        <label className="form-check-label" htmlFor="userRegistration">
           User registration
         </label>
       </div>
