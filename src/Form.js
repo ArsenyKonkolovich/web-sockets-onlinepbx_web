@@ -1,5 +1,4 @@
 import React from 'react';
-import './index.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min'
 
@@ -11,6 +10,7 @@ export function Form({state, dispatch}) {
         setApiKey: "setApiKey",
         setCalls: "setCalls",
         setGateway: "setGateway",
+        setIsConnect: "setIsConnect",
         setUserBlf: "setUserBlf",
         setUserRegistration: "setUserRegistration",
     }
@@ -24,16 +24,15 @@ export function Form({state, dispatch}) {
   }
   
   const invertParams = (eventName, propName) => {
-    console.log(eventName, propName)
     return dispatch(
         {type: FORM_ACTIONS[eventName], payload: {eventName: state[propName]}}
     )
   }
     return (
-        <form>
-            <div className="input-group mb-3 mt-3">
+        <form >
+            <div className="input-group mb-3">
                 <input type="text" onChange={handleInputChange} name="setAccountName" className="form-control" placeholder="Аккаунт" aria-label="Аккаунт" aria-describedby="basic-addon2"></input>
-                <span className="input-group-text" id="basic-addon2">.onlinepbx.ru</span>
+                <span className="input-group-text" id="basic-addon2">.onpbx.ru</span>
             </div>
             <div className="input-group mb-3">
                 <input type="text" onChange={handleInputChange} name="setApiKey" className="form-control" placeholder="Api ключ" aria-label="Api ключ" aria-describedby="basic-addon2"></input>
@@ -64,7 +63,8 @@ export function Form({state, dispatch}) {
                 }} role="switch" id="flexSwitchCheckDefault"></input>
                 <label className="form-check-label" htmlFor="flexSwitchCheckDefault">User registration</label>
             </div><button type="button" onClick={() => { 
-              console.log(state) } } className="btn btn-primary mt-3">Подключиться</button>
+              invertParams('setIsConnect', 'isConnect');
+                }} className="btn btn-primary mt-3">Подключиться</button>
         </form>
     );
   }

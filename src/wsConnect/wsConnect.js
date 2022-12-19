@@ -1,27 +1,25 @@
 
-import WebSocket from 'ws';
+// import WebSocket from 'ws';
 import { dateCreator, dataFormatter } from './util.js';
 
 
-const wsConnect = (props) => {
+const wsConnect = (props, setEvents, events) => {
     const account = props.accountName;
     const apiKey = props.apiKey;
     const calls = props.calls ? 'calls' : '';
     const gateway = props.gateway ? 'gateway' : '';
-    const userBlf = props.userBlf ? 'calls' : '';
-    const userRegistration = props.userRegistration ? 'calls' : '';
+    const userBlf = props.userBlf ? 'userBlf' : '';
+    const userRegistration = props.userRegistration ? 'userRegistration' : '';
 
     const groupNames = [calls, gateway, userBlf, userRegistration]
 
-    const ws = new WebSocket(`wss://${account}.onlinepbx.ru:3342/?key=${apiKey}`);
+    const ws = new WebSocket(`wss://${account}.onpbx.ru:3342/?key=${apiKey}`);
 
     ws.onopen = function () {
         ws.send(JSON.stringify({
             "command": "subscribe",
             "data": {
-                "eventGroups": [
-                    groupNames.filter((name) => name !== '')
-                ]
+                "eventGroups": groupNames.filter((name) => name !== '')
             }
         }));
         console.log('Connect')
@@ -31,7 +29,7 @@ const wsConnect = (props) => {
         const currentDate = dateCreator();
         const data = dataFormatter(event.data);
         const strData = `${currentDate} \n${data}\n\n`;
-        console.log(strData);
+        setEvents(strData);
     };
 }
 
